@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Borders</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<style type="text/css">
+	body{background-color:#E3EDD8;font-size:20px;font-family:calibri;}
+	button{background-color:lightgreen;display:block;margin:2;padding: 2;}
+	.button 
+    {       
+        background-color: #4CAF50;
+        color: #333333;
+        width: 65px;
+        padding: 2px 6px 2px 6px;
+        border-top: 0px ;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-left: 10px ;
+        border-radius:10px;
+        float: left;
+    }
+    .button1 
+    {       
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 0px ;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-left: 0px ;
+        border-radius:10px;
+    }
+    ::-webkit-scrollbar 
+    {
+       width: 0px;
+    }
+    #p 
+    {
+        border-top-style: dotted;
+        border-right-style: solid;
+        border-bottom-style: dotted;
+        border-left-style: solid;
+    }
+</style>
+</head>
+<body>
+	<h1 id="top"><b><u>C.S.S. Borders Properties</u></b></h1>
+	<p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>	    
+	<hr>
+	<h3>Border Style</h3>
+    <p>The border-style property specifies what kind of border to display.<br>The following values are allowed:</p>
+	<ul type="square">
+		<li><b>dotted</b> - Defines a dotted border</li>
+        <li><b>dashed</b> - Defines a dashed border</li>
+        <li><b>solid</b> - Defines a solid border</li>
+        <li><b>double</b> - Defines a double border</li>
+        <li><b>groove</b>Defines a 3D grooved border. The effect depends on the border-color value</li>
+        <li><b>ridge</b> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+        <li><b>inset</b> - Defines a 3D inset border. The effect depends on the border-color value</li>
+        <li><b>outset</b> - Defines a 3D outset border. The effect depends on the border-color value</li>
+        <li><b>none</b> - Defines no border</li>
+        <li><b>hidden</b> - Defines a hidden border</li>
+    </ul>
+    <p>The border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>        
+	<hr>
+	<h3>Border Width</h3>
+	<p>The border-width property specifies the width of the four borders.<br>The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.<br>The border-width property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+    <hr>
+    <h3>Border Color</h3>
+    <p>The border-color property is used to set the color of the four borders.<br>The color can be set by:</p>
+    <ul>
+        <li>name - specify a color name, like "red"</li>
+        <li>Hex - specify a hex value, like "#ff0000"</li>
+        <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+        <li>transparent</li>
+    </ul>    
+	<hr>
+    <button class="button" id="toggle1">Example</button>
+    <button class="button" id="toggle2">Output</button>
+    <br>   
+    <h3>Border - Individual Sides</h3>
+    <p>From the examples above you have seen that it is possible to specify a different border for each side.<br>In CSS, there are also properties for specifying each of the borders (top, right, bottom, and left):</p>
+    <p id="p">2 different border styles.</p>
+    <a href="#top" class="button1" >Click Here To Go To The Top</a>
+    <script type="text/javascript">
+        var c=0;
+        var c1=0;
+        $("#toggle1").click(function () 
+        {                   
+            if(c==0) 
+            {
+                window.open("code4.html","code_w");
+                c=1;
+            }
+            else
+            {
+                window.open("code0.html","code_w");
+                c=0;    
+            }
+
+        });
+        $("#toggle2").click(function () 
+        {                   
+            if(c1==0) 
+            {
+                window.open("output4.html","output_w");
+                c1=1;
+            }
+            else
+            {
+                window.open("output0.html","output_w");
+                c1=0;   
+            }
+
+        });
+    </script>
+</body>
+</html>

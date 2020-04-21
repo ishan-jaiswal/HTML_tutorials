@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Links</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<style type="text/css">
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    bottom: fixed;
+    position: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+#header
+{
+    position: fixed;
+    z-index: 1;
+    height:40px;
+    width: 98%;
+    margin-bottom: 10px
+}
+li 
+{
+    float: inline-block;
+    border-radius:10px;
+}
+li a, .dropbtn {
+    display:block;
+    color: white;
+    text-align:center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: block;
+    float:left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: inline;
+}
+	body{background-color:rgb(60, 60, 60);font-size:20px;font-family: calibri;color:maroon;text-align: center;padding-bottom:2px}
+	.button 
+	{       
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 0px ;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-left: 0px ;
+        border-radius:10px;
+    }
+    ::-webkit-scrollbar 
+    {
+        width: 0px;
+    }
+    h3
+    {
+        text-align:left;
+        background-color: #4CAF50;
+        color: white;
+        border-radius:5px;
+        width: 200px;
+    }
+    li a.li:hover:not(.active) 
+    {
+        background-color: #555;
+        color: white;
+    }
+    #span{
+        color: white;
+        font-size:20px;
+        float: left;
+        width: 165px;
+        height: 60px;
+
+    }
+    #span:hover
+    {
+        background-color: red;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<ul>
+  <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Tutorials</a>
+        <div class="dropdown-content">
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank">Java Script</a>
+            <a href="https://www.w3schools.com/sql/default.asp" target="_blank">SQL</a>
+            <a href="https://www.w3schools.com/php/default.asp" target="_blank">PHP</a>
+            <a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank">Bootstrap</a>
+        </div>
+    </li>
+    <div id="span">
+        <p onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html';parent.data_window.location='css1.html';parent.deve_w.location='developers.html'">Home
+        </p>
+    </div>
+</ul>
+    <h3 style="position: fixed;">CSS Tutorials</h3>
+	<ul class="list-unstyled detail-sidemenu mrb15" style="list-style-type: none;margin-top:40px;padding: 0;background-color:rgb(60, 60,60);">
+        <li style="display:block;text-decoration:none;color:lightgrey;text-align:left;height: 100%; overflow:auto; "><a href="css1.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'" style="text-align: left;">CSS Intro</a></li>
+        <li style="display: block;text-decoration:none;color:lightgrey;text-align:left;height: 100%; overflow:auto; "><a href="css2.html" target="data_window"onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'" style="text-align: left;"> CSSColors</a></li>
+        <li style="display: block;text-decoration:none;color:lightgrey;text-align:left;height:100%; overflow:auto; "><a href="css3.html" target="data_window"onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'" style="text-align: left;">CSS Background</a></li>
+        <li style="display: block;text-decoration:none;color:lightgrey;text-align: left;height: 100%; overflow:auto; "><a href="css4.html" target="data_window"onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'" style="text-align: left;">CSS Borders</a></li>
+        <li style="display: block;text-decoration:none;color:lightgrey;text-align: left;height: 100%; overflow:auto; "><a href="css5.html" target="data_window"  onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'" style="text-align: left;">CSS Links</a></li>
+    </ul>
+
+</body>
+</html>

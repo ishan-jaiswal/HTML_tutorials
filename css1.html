@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery.min.js"></script>
+<title>CSS Intro</title>
+<style type="text/css">
+	body{background-color:#E3EDD8;font-size:20px;font-family:calibri;}
+	button{background-color:lightgreen;display:block;margin:2;padding: 2;}
+	.button 
+	{       
+        background-color: #4CAF50;
+        color: #333333;
+        width: 65px;
+        padding: 2px 6px 2px 6px;
+        border-top: 0px ;
+        border-right: 0px;
+        border-bottom: 0px;
+        height:20px;
+        border-left: 10px ;
+        border-radius:10px;
+        float: left;
+    }
+    .button1 
+	{       
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 0px ;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-left: 0px ;
+        border-radius:10px;
+    }
+    ::-webkit-scrollbar {
+    width: 0px;
+}
+</style>
+</head>
+<body>
+	<h1 id="top"><b><u>C.S.S. Introduction</u></b></h1>
+	<p>CSS is a language that describes the style of an HTML document.<br>CSS describes how HTML elements should be displayed.<br>This tutorial will teach you CSS from basic to advanced.</p>
+	<hr>
+	<h3>What is CSS?</h3>
+	<ul type="circle">
+		<li>CSS stands for Cascading Style Sheets</li>
+		<li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+		<li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+		<li>External stylesheets are stored in CSS files</li>		
+	</ul>
+	<hr>
+	<h3>Types of C.S.S.</h3>
+	<ol>
+		<li>Inline</li>
+		<li>Internal</li>
+		<LI>External</LI>	
+	</ol>
+	<dl>
+		<dt><b>External Style Sheets</b></dt>
+			<dd>An external style sheet is ideal when the style is applied to many pages.<br>With an external style sheet, you can change the look of an entire Web site by changing one file.<br>Each page must link to the style sheet using the &ltlink> tag. The &ltlink> tag goes inside the &lthead> section:<br>&lthead><br>&ltlink rel="stylesheet" type="text/css" href="mystyle.css"><br>&lt/head></dd><hr>
+		<dt><b>Internal Style Sheet</b></dt>
+			<dd>An internal style sheet can be used if one single document has a unique style.<br>Internal styles are defined in the&lthead>section of an HTML page, by using the &ltstyle> tag, like this:<br>&lthead><br>&ltstyle type="text/css"><br>body {background-color:yellow;}<br>p {color:blue;}<br>&lt/style><br>&lt/head></dd><hr>
+		<dt><b>Inline Style Sheet</b></dt>
+		<dd>An inline style can be used if a unique style is to be applied to one single occurrence of an element.<br>To use inline styles, use the style attribute in the relevant tag. The style attribute can contain any CSS property. The example below shows how to change the text color and the left margin of a paragraph:<br>&ltp style="color:blue;margin-left:20px;">This is a paragraph.&lt/p></dd>
+	</dl>
+	<hr>
+    <button class="button" id="toggle1">Example</button>
+    <button class="button" id="toggle2">Output</button>
+    <br>
+    <h3>Syntax:-</h3>
+    <p>A CSS rule-set consists of a selector and a declaration block:</p>
+    <img src="https://www.w3schools.com/css/selector.gif">
+    <p>The selector points to the HTML element you want to style.<br>The declaration block contains one or more declarations separated by semicolons.<br>Each declaration includes a CSS property name and a value, separated by a colon.<br>A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.</p>
+    <a href="#top" class="button1" >Click Here To Go To The Top</a>
+    <script type="text/javascript">
+    	var c=0;
+    	var c1=0;
+    	$("#toggle1").click(function () 
+    	{    	    		
+    		if(c==0) 
+    		{
+    			window.open("code1.html","code_w");
+    			c=1;
+    		}
+    		else
+    		{
+    			window.open("code0.html","code_w");
+    			c=0;	
+    		}
+
+    	});
+    	$("#toggle2").click(function () 
+    	{    	    		
+    		if(c1==0) 
+    		{
+    			window.open("output1.html","output_w");
+    			c1=1;
+    		}
+    		else
+    		{
+    			window.open("output0.html","output_w");
+    			c1=0;	
+    		}
+
+    	});
+    </script>
+</body>
+</html>

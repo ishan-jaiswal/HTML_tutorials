@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Developers</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<style type="text/css">
+    body{background-color:rgb(60, 60, 60);font-size:20px;font-family: calibri;color:maroon;text-align: center;padding-bottom:2px}
+    ::-webkit-scrollbar 
+    {
+        width: 0px;
+    }
+    h3
+    {
+        text-align:left;
+        background-color: #4CAF50;
+        color: white;
+        border-radius:5px;
+    }    
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background-color:rgb(60, 60, 60);
+    }
+    li a,p
+    {
+        display: block;
+        position: relative;
+        text-decoration:none;
+        color:lightgrey;
+        text-align: left;
+        padding: 8px 16px;
+        height: 100%;
+        border-radius:10px; 
+        overflow: auto; 
+    }
+    li p{
+        display: block;
+        position: relative;
+        color:lightgrey;
+        text-align: left;
+        padding: 8px 16px;
+        height: 100%;
+        border-radius:10px; 
+        overflow: auto;
+    }
+    li a:hover:not(.active) 
+    {
+        background-color: red;
+        color: white;
+    }
+    li p:hover:not(.active)
+    {
+        background-color: red;
+        color: white;
+    }
+    #header
+    {
+        position: fixed;
+        z-index: 1;
+        height:40px;
+        width:90%;
+        top:0;
+        bottom:0;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+    <h3>Developers</h3></div>
+    <ul>
+        <br><br>
+        <li><a href="harsha.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'">Harsha Khubwani</a></li>
+        <li><p id="ishan">Ishan Jaiswal</p></li>
+        <li><a href="joy.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'">Joydeep Ghosh</a></li>
+        <li><a href="milind.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'">Milind Mazumder</a></li>
+        <li><a href="sayan.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'">Sayan Basu</a></li>
+        <li><a href="shrey.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'">Shrey Kochar</a></li>
+        <li><a href="patra.html" target="data_window" onclick="parent.code_w.location='code0.html';parent.output_w.location='output0.html'">Shubham Patra</a></li>                                   
+    </ul>
+    <script type="text/javascript">
+        $("#ishan").click(function() 
+        {
+            window.open("ishan.html","data_window");
+            window.open("code0.html","code_w");
+            window.open("output0.html","output_w");
+            $("li").fadeOut("slow"); 
+            setTimeout(function() {
+
+                $("#ishan").fadeIn();
+        
+            }, 10000);           
+        });
+    </script>
+</body>
+</html>

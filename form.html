@@ -1,0 +1,209 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <style type="text/css">
+    h2{text-align:left;
+      margin: 500px;
+    }
+    form{background-color:#afafaf; padding-left: 5px;}
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    #rangeval{display:block;
+      font-size:15px;
+    }
+    b{color: red;
+      font-size:15px;}
+   </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="jquery.min.js"></script>    
+    <title>Feedback Form</title>
+  </head>
+  <form>
+    <h2>Feedback</h2>
+      <div class="form-row">
+        <div class="form-group col-md-4" style="margin-left:5px;">
+            <label for="name">Name<b>*</b></label>
+            <input type="name" class="form-control" id="name">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="emaik">Email<b>*</b></label>
+            <input type="email" class="form-control" id="email" placeholder="xyz@example.com">
+        </div>        
+    </div>
+    <div class="form-group col-md-3">
+          <label for="tele">Telephone<b>*</b></label>
+          <input type="number" class="form-control" id="tele" min="5000000000">
+    </div>
+    <ul style="list-style-type: circle;">
+    <li>
+      <div class="form-group col-md-3">
+          <label for="q1">What is your opinion on this tutorials?<b>*</b></label>
+          <textarea class="form-control" id="q1" rows="3" placeholder="Enter your text here" style="resize: none;"></textarea>
+        </div>
+      </li>
+      <li>
+        <legend class="col-form-label col-sm-4 pt-0">Will you recommend this website to someone else?</legend>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="2radio1" value="option1">
+        <label class="form-check-label" for="2radio1">
+          Yes
+        </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="2radio2" value="option2">
+          <label class="form-check-label" for="2radio2">
+            No
+          </label>
+      </div>
+    </li>
+    <li>
+        <div class="form-group col-md-3">
+          <label for="q4">How did you find this tutorial?<b>*</b></label>
+          <textarea class="form-control" id="q4" rows="3" placeholder="Enter your text here" style="resize: none;"></textarea>
+        </div>
+      </li>
+      <li>
+        <legend class="col-form-label col-sm-4 pt-0">Do you find this website helful?</legend>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="4radio1" value="option1">
+        <label class="form-check-label" for="4radio1">
+          Yes
+        </label>
+      </div>
+
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="4radio2" value="option2">
+          <label class="form-check-label" for="4radio2">
+            No
+          </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="4radio3" value="option2">
+          <label class="form-check-label" for="4radio3">
+            Partially
+          </label>
+      </div>
+    </li>
+    <li>
+      <legend class="col-form-label col-sm-4 pt-0">Was it easy to navigate?</legend>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="5radio1" value="option1">
+        <label class="form-check-label" for="5radio1">
+          Yes
+        </label>
+      </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="5radio2" value="option2">
+          <label class="form-check-label" for="5radio2">
+            No
+          </label>
+      </div>
+    </li>
+    <li>
+      <div class="form-group col-md-6">
+          <label for="range">How visually appealing is our website.</label>
+          <input type="range" class="form-control-range" id="range" min="0" max="10" step="1">          
+      </div>
+      <p id="rangeval"></p>
+    </li>
+    <li>
+        <div class="form-group col-md-3">
+          <label for="q7">What changes would you like to see?<b>*</b></label>
+          <textarea class="form-control" id="q7" rows="3" placeholder="Enter your text here" style="resize: none;"></textarea>
+        </div>
+      </li>
+    </ul>
+  <table>
+    <tr>
+           <td width="600" style="text-align: right;">
+               <input type="submit" name="Submit" id="submit" class="btn btn-primary">
+           </td>
+           <td width="600" style="text-align: left;">
+              <input type="reset" name="Reset" id="reset" class="btn btn-primary">
+         </td>
+    </tr>
+  </table>   
+</form>
+<body>
+<script type="text/javascript">
+    function disabledfal()
+    {
+      $("#submit").attr("disabled",false);
+    }
+    function togglesubmit() {
+      $("#submit").removeClass("btn btn-warning");
+      $("#submit").addClass("btn btn-primary");
+    }
+    function togglereset() 
+    {
+      $("#reset").removeClass("btn btn-warning");
+      $("#reset").addClass("btn btn-primary");
+    }
+   $("#reset").click(function() 
+   {     
+     $("#rangeval").html("");
+     $("#reset").toggleClass("btn btn-warning");
+     setTimeout(togglereset, 1500);
+     alert("All fields have  been reset.");
+   });
+   $("#submit").click(function()
+   {
+      var er=0;
+      if ($("#email").val()=="")
+      {
+        er++;
+      }
+      if ($("#name").val()=="")
+      {
+        er++;
+      }
+      if ($("#tele").val()=="")
+      {
+        er++;
+      }
+      if ($("#q1").val()=="")
+      {
+        er++;
+      }
+      if ($("#q4").val()=="")
+      {
+        er++;
+      }
+      if ($("#q7").val()=="")
+      {
+        er++;
+      }
+      if(er>=2)
+      {        
+        $("#submit").attr("disabled",true);
+        setTimeout(disabledfal,1500);
+        $("#submit").toggleClass("btn btn-warning");
+        setTimeout(togglesubmit, 1500);        
+        alert("Item missing\nPlease fill the fields marked by *");
+      }
+      else if(er==1)
+      {        
+        $("#submit").attr("disabled",true);
+        setTimeout(disabledfal,1500);
+        $("#submit").toggleClass("btn btn-warning");
+        setTimeout(togglesubmit, 1500);
+        alert("Items missing\nPlease fill the field marked by *");
+      }
+      if (er==0)
+      {
+        $("#submit").toggleClass("btn btn-success");
+        alert("Thank You");
+      }
+   });
+  $('#range').change(function() 
+  {
+    $('#rangeval').html("Value : " + $(this).val());
+  });
+</script>
+</body>
+</html>
